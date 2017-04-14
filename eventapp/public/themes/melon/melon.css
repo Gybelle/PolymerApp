@@ -31,7 +31,57 @@ a, a:active, a:visited, a:focus { color: white; text-decoration: none; }
 
 a:hover { color: white; text-decoration: underline; }
 
-:root { --default-primary-color: #e8485f; --dark-primary-color: #e84a5f; --light-primary-color: #c5cae9; --text-primary-color: #ffffff; --accent-color: #ff4081; --primary-background-color: #ffffff; --primary-text-color: white; --secondary-text-color: white; --disabled-text-color: #070809; --divider-color: #e0e0e0; --paper-checkbox-checked-color: #e8485f; --paper-checkbox-checked-ink-color: #e8485f; --paper-checkbox-unchecked-color: white; --paper-checkbox-unchecked-ink-color: white; --paper-checkbox-label-color: white; --paper-fab-background: #e8485f; --paper-fab-disabled-background: #7a8e95; --paper-fab-disabled-text: #070809; --paper-icon-button-disabled-text: #7a8e95; --paper-input-container-color: #ccc; --paper-input-container-focus-color: #e8485f; --paper-input-container-invalid-color: #f8bbd0; --paper-input-container-input-color: #ccc; --paper-menu-background-color: #3a474c; --paper-menu-color: white; --paper-menu-disabled-color: #7a8e95; --paper-progress-active-color: #e8485f; --paper-progress-secondary-color: #ff847c; --paper-radio-button-checked-color: #e8485f; --paper-radio-button-checked-ink-color: white; --paper-radio-button-unchecked-color: white; --paper-radio-button-unchecked-ink-color: white; --paper-radio-button-label-color: white; --paper-slider-knob-color: #e8485f; --paper-slider-active-color: #e8485f; --paper-slider-pin-color: #e8485f; --paper-spinner-layer-1-color: #e8485f; --paper-spinner-layer-2-color: #e8485f; --paper-spinner-layer-3-color: #e8485f; --paper-spinner-layer-4-color: #e8485f; --paper-tabs-selection-bar-color: #ff847c; --paper-tab-ink: #ff847c; --paper-toggle-button-checked-bar-color: #e8485f; --paper-toggle-button-checked-button-color: #e8485f; --paper-toggle-button-checked-ink-color: #e8485f; --paper-toggle-button-unchecked-bar-color: white; --paper-toggle-button-unchecked-button-color: white; --paper-toggle-button-unchecked-ink-color: white; --paper-toolbar-background: #e84a5f; --paper-toolbar-color: #ffffff; }
+:root {
+    --default-primary-color: #e8485f;
+    --dark-primary-color: #e84a5f;
+    --light-primary-color: #c5cae9;
+    --text-primary-color: #ffffff;
+    --accent-color: #ff4081;
+    --primary-background-color: #ffffff;
+    --primary-text-color: white;
+    --secondary-text-color: white;
+    --disabled-text-color: #070809;
+    --divider-color: #e0e0e0;
+    --paper-checkbox-checked-color: #e8485f;
+    --paper-checkbox-checked-ink-color: #e8485f;
+    --paper-checkbox-unchecked-color: white;
+    --paper-checkbox-unchecked-ink-color: white;
+    --paper-checkbox-label-color: white;
+    --paper-fab-background: #e8485f;
+    --paper-fab-disabled-background: #7a8e95;
+    --paper-fab-disabled-text: #070809;
+    --paper-icon-button-disabled-text: #7a8e95;
+    --paper-input-container-color: #ccc;
+    --paper-input-container-focus-color: #e8485f;
+    --paper-input-container-invalid-color: #f8bbd0;
+    --paper-input-container-input-color: #ccc;
+    --paper-menu-background-color: #3a474c;
+    --paper-menu-color: white;
+    --paper-menu-disabled-color: #7a8e95;
+    --paper-progress-active-color: #e8485f;
+    --paper-progress-secondary-color: #ff847c;
+    --paper-radio-button-checked-color: #e8485f;
+    --paper-radio-button-checked-ink-color: white;
+    --paper-radio-button-unchecked-color: white;
+    --paper-radio-button-unchecked-ink-color: white;
+    --paper-radio-button-label-color: white;
+    --paper-slider-knob-color: #e8485f;
+    --paper-slider-active-color: #e8485f;
+    --paper-slider-pin-color: #e8485f;
+    --paper-spinner-layer-1-color: #e8485f;
+    --paper-spinner-layer-2-color: #e8485f;
+    --paper-spinner-layer-3-color: #e8485f;
+    --paper-spinner-layer-4-color: #e8485f;
+    --paper-tabs-selection-bar-color: #ff847c;
+    --paper-tab-ink: #ff847c;
+    --paper-toggle-button-checked-bar-color: #e8485f;
+    --paper-toggle-button-checked-button-color: #e8485f;
+    --paper-toggle-button-checked-ink-color: #e8485f;
+    --paper-toggle-button-unchecked-bar-color: white;
+    --paper-toggle-button-unchecked-button-color: white;
+    --paper-toggle-button-unchecked-ink-color: white;
+    --paper-toolbar-background: #e84a5f;
+    --paper-toolbar-color: #ffffff; }
 
 paper-toolbar a, paper-toolbar a:hover, paper-toolbar a:active, paper-toolbar a:visited, paper-toolbar a:focus { color: #ffffff; }
 

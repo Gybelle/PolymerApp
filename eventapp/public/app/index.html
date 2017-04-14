@@ -1,11 +1,43 @@
 <link rel="import" href="../assets/components/polymer/polymer-element.html">
+<link rel="import" href="../assets/components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../assets/components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../assets/components/app-layout/app-header/app-header.html">
+<link rel="import" href="../assets/components/app-layout/app-scroll-effects/effects/waterfall.html">
+<link rel="import" href="../assets/components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../assets/components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../assets/components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../assets/components/app-route/app-location.html">
+<link rel="import" href="../assets/components/app-route/app-route.html">
+<link rel="import" href="../assets/components/iron-pages/iron-pages.html">
+<link rel="import" href="../assets/components/iron-selector/iron-selector.html">
+<link rel="import" href="../assets/components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="/assets/app/my-icons.html">
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="import" href="../assets/app/michelle-test.html">
+        <link rel="import" href="../assets/themes/melon/melon.html">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/event.css">
     </head>
     <body>
-        <h1>Hello Michelle</h1>
-        <michelle-test></michelle-test>
+
+    <app-drawer-layout fullbleed>
+
+        <app-header-layout has-scrolling-region>
+
+            <app-header slot="header" condenses reveals>
+                <app-toolbar>
+                    <h1>My App</h1>
+                </app-toolbar>
+            </app-header>
+
+            <h1>Hello Michelle</h1>
+            <p>test</p>
+            <michelle-test></michelle-test>
+
+        </app-header-layout>
+    </app-drawer-layout>
+
     </body>
 </html>
