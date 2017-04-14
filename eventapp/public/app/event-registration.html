@@ -1,0 +1,31 @@
+<!--
+    This is an element holding information about the event.
+-->
+
+<link rel="import" href="../components/polymer/polymer-element.html">
+<link rel="import" href="../components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../components/paper-input/paper-input.html">
+<link rel="import" href="../components/iron-icons/iron-icons.html">
+
+<dom-module id="event-registration">
+    <link rel="import" href="../themes/melon/melon.css" type="css">
+    <link rel="import" href="../stylesheets/event.css" type="css">
+
+    <template>
+        <div class="card">
+            <h1>Register for the event</h1>
+            <form is="iron-form" id="form" method="post" action="/form/handler">
+                <paper-input name="name" label="name"></paper-input>
+                <input name="address">
+            </form>
+        </div>
+    </template>
+
+    <script>
+        class EventRegistration extends Polymer.Element {
+            static get is() { return "event-registration"; }
+        }
+        customElements.define(EventRegistration.is, EventRegistration);
+    </script>
+
+</dom-module>

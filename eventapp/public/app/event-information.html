@@ -1,0 +1,31 @@
+<!--
+    This is an element holding information about the event.
+-->
+
+<link rel="import" href="../components/polymer/polymer-element.html">
+<link rel="import" href="../components/paper-checkbox/paper-checkbox.html">
+
+<dom-module id="event-information">
+    <link rel="import" href="../themes/melon/melon.css" type="css">
+    <link rel="import" href="../stylesheets/event.css" type="css">
+
+    <template>
+        <div class="event-card">
+            <div class="info">
+                <img src="../assets/images/icecreamicon.png" alt="Icecream logo" class="event-icon">
+                <h2>Icecream Festival 2017</h2>
+                <p class="description">Description</p>
+                <p class="date">Date</p>
+                <p class="location">Location</p>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        class EventInformation extends Polymer.Element {
+            static get is() { return "event-information"; }
+        }
+        customElements.define(EventInformation.is, EventInformation);
+    </script>
+
+</dom-module>

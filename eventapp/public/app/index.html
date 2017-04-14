@@ -11,12 +11,13 @@
 <link rel="import" href="../assets/components/iron-pages/iron-pages.html">
 <link rel="import" href="../assets/components/iron-selector/iron-selector.html">
 <link rel="import" href="../assets/components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="/assets/app/my-icons.html">
+<link rel="import" href="../assets/components/paper-button/paper-button.html">
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="import" href="../assets/app/michelle-test.html">
+        <link rel="import" href="../assets/app/event-information.html">
+        <link rel="import" href="../assets/app/event-registration.html">
         <link rel="import" href="../assets/themes/melon/melon.html">
         <link rel="stylesheet" type="text/css" href="../assets/stylesheets/event.css">
     </head>
@@ -28,13 +29,15 @@
 
             <app-header slot="header" condenses reveals>
                 <app-toolbar>
-                    <h1>My App</h1>
+                    <h1>Summer Festivals</h1>
+                    <div class="toolbar-buttons"">
+                        <paper-button raised class="header-button">Register</paper-button>
+                        <paper-button raised class="header-button">Login</paper-button>
+                    </div>
                 </app-toolbar>
             </app-header>
-
-            <h1>Hello Michelle</h1>
-            <p>test</p>
-            <michelle-test></michelle-test>
+            <event-information></event-information>
+            <event-registration></event-registration>
 
         </app-header-layout>
     </app-drawer-layout>
