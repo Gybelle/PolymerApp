@@ -1,0 +1,18 @@
+<link rel="import" href="../components/polymer/polymer-element.html">
+<link rel="import" href="../components/paper-checkbox/paper-checkbox.html">
+
+<dom-module id="michelle-test">
+
+    <template>
+        <p>My name is Michelle.</p>
+        <paper-checkbox>Ready to code!</paper-checkbox>
+    </template>
+
+    <script>
+        class MichelleTest extends Polymer.Element {
+            static get is() { return "michelle-test"; }
+        }
+        customElements.define(MichelleTest.is, MichelleTest);
+    </script>
+
+</dom-module>
