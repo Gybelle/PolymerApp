@@ -1,11 +1,8 @@
 <!--
     This is an element holding information about the event.
 -->
-
 <link rel="import" href="../components/polymer/polymer-element.html">
 <link rel="import" href="../components/paper-checkbox/paper-checkbox.html">
-<link rel="import" href="../components/paper-input/paper-input.html">
-<link rel="import" href="../components/iron-icons/iron-icons.html">
 
 <dom-module id="event-registration">
     <link rel="import" href="../themes/melon/melon.css" type="css">
@@ -14,9 +11,24 @@
     <template>
         <div class="card">
             <h1>Register for the event</h1>
-            <form is="iron-form" id="form" method="post" action="/form/handler">
-                <paper-input name="name" label="name"></paper-input>
-                <input name="address">
+            <p>this is normal text</p>
+            <form action="/register.php">
+                <input class="left" type="text" id="fname" name="firstname" placeholder="Firstname">
+                <input type="text" id="lname" name="lastname" placeholder="Lastname">
+                <input class="left" type="text" id="mail" name="mail" placeholder="Mail">
+                <input class="left" type="text" id="passsword1" name="password1" placeholder="Password">
+                <input type="text" id="password2" name="password2" placeholder="Re-type password">
+
+                <label for="tickets">Tickets</label>
+                <select id="tickets" name="Tickets">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <input type="submit" value="Submit">
             </form>
         </div>
     </template>
