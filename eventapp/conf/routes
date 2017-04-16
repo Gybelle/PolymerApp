@@ -4,6 +4,9 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.Assets.at(path="/public", file="app/index.html")
+
+POST    /register                   controllers.RegisterController.registerUser
+
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code

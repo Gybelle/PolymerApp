@@ -3,6 +3,9 @@
 -->
 <link rel="import" href="../components/polymer/polymer-element.html">
 <link rel="import" href="../components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../components/paper-input/paper-input.html">
+<link rel="import" href="../components/paper-button/paper-button.html">
+<link rel="import" href="../components/iron-form/iron-form.html">
 
 <dom-module id="event-registration">
     <link rel="import" href="../themes/melon/melon.css" type="css">
@@ -11,16 +14,16 @@
     <template>
         <div class="card">
             <h1>Register for the event</h1>
-            <p>this is normal text</p>
-            <form action="/register.php">
-                <input class="left" type="text" id="fname" name="firstname" placeholder="Firstname">
-                <input type="text" id="lname" name="lastname" placeholder="Lastname">
-                <input class="left" type="text" id="mail" name="mail" placeholder="Mail">
-                <input class="left" type="text" id="passsword1" name="password1" placeholder="Password">
-                <input type="text" id="password2" name="password2" placeholder="Re-type password">
+            <p>Registration for this event is required.</p>
+            <form action="/register"  method="post">
+                <input type="text" id="firstname" name="firstname" placeholder="Firstname" required>
+                <input type="text" id="lastname" name="lastname" placeholder="Lastname" required>
+                <input  type="email" id="mail" name="mail" placeholder="Mail" required>
+                <input type="password" id="password" name="password" placeholder="Password" onchange="passValidation(event, false)" required>
+                <input type="password" id="re-password" name="re-password" placeholder="Re-type password"  onchange="passValidation(event, true)" required>
 
                 <label for="tickets">Tickets</label>
-                <select id="tickets" name="Tickets">
+                <select id="tickets" name="tickets">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -28,9 +31,11 @@
                     <option value="5">5</option>
                 </select>
 
-                <input type="submit" value="Submit">
+                <input id="input-button" name="input-button" type="submit" value="Submit" disabled>
             </form>
         </div>
+
+
     </template>
 
     <script>
@@ -38,6 +43,55 @@
             static get is() { return "event-registration"; }
         }
         customElements.define(EventRegistration.is, EventRegistration);
+
+        function submit(event) {
+            passwordsMatch = passValidation(event, null);
+            passwordLengthVal = passLengthValidation(event);
+            if (passwordsMatch && passwordLengthVal){
+                Polymer.dom(event).localTarget.parentElement.submit();
+            }
+        }
+
+        function passLengthValidation(event) {
+            //Get the form
+            form = Polymer.dom(event).localTarget.parentElement;
+
+            //Read password value
+            password = form["password"].value;
+
+            if(! (password.length() >= 6 && password.length() <= 20)){
+                alert("The password must be between 6 and 20 characters.");
+                return false;
+            }
+
+            return true;
+        }
+
+        function passValidation(event, showAlert) {
+            //Get the form
+            form = Polymer.dom(event).localTarget.parentElement;
+
+            //Read password values
+            password = form["password"].value;
+            retyped_password = form["re-password"].value;
+
+            //Get button
+            button =  form["input-button"];
+
+            //Check if passwords are the same
+            if (password != retyped_password) {
+                if (showAlert) {
+                    alert('Please provide the same password in both password fields.');
+                }
+                button.disabled = true;
+                return false;
+            }
+            button.disabled = false;
+            return true;
+        }
+
+
+
     </script>
 
 </dom-module>
