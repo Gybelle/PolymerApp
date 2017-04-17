@@ -11,10 +11,10 @@ The front-end is implemented using the Polymer framework. The Java Play framewor
 - **Public > themes** the Polymer Melon theme was chosen.
 
 ### Back-end
-- **conf -> application.conf**: the path to the database is specified here.
-- **conf -> routes**: end-points of the Restfull API.
-- **app -> data**: contains the SQLite Databse.
-- **app -> controllers**:  implementation of the registration can be found here.
+- **conf > application.conf**: the path to the database is specified here.
+- **conf > routes**: end-points of the Restfull API.
+- **app > data**: contains the SQLite Databse.
+- **app > controllers**:  implementation of the registration can be found here.
 
 ### General
 - **bower.json** : dependencies regarding the polymer web components are specified here.
