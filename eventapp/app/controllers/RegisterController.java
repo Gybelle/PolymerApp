@@ -239,5 +239,4 @@ public class RegisterController extends Controller{
         return null;
     }
 
-
 }
